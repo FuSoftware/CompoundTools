@@ -39,6 +39,8 @@ namespace CompoundTools.CFB
                 {
                     sectors.Add(BitConverter.ToInt32(bytes, i));
                 }
+
+                //nextSector = currentSector.NextSector;
             } while (nextSector > 0);
 
             Console.WriteLine("Found {0} ShortSectors, excpeted {1}", sectors.Count, header.ShortSectorCount);

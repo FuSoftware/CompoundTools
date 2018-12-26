@@ -17,10 +17,12 @@ namespace CompoundTools.CFB
             MSAT = -4
         }
 
-        public CFBSectorAllocationTable SAT;
-        public CFBHeader Header;
-        public CFBMSAT MSAT;
-        public CFBSSAT SSAT;
+        public CFBSAT SAT { get; set; }
+        public CFBHeader Header { get; set; }
+        public CFBMSAT MSAT { get; set; }
+        public CFBSSAT SSAT { get; set; }
+        public CFBDirectoryEntry RootDirectory { get; set; }
+        public byte[] Data { get; set; }
 
         public CFBFile(byte[] data)
         {
@@ -29,10 +31,12 @@ namespace CompoundTools.CFB
 
         void Parse(byte[] data)
         {
+            this.Data = data;
             this.Header = new CFBHeader(data);
             this.MSAT = new CFBMSAT(data, this);
-            this.SAT = new CFBSectorAllocationTable(data, this.MSAT.Sectors, this);
-            this.SSAT = new CFBSSAT(data, this);
+            this.SAT = new CFBSAT(data, this.MSAT.Sectors, this);
+            this.RootDirectory = new CFBDirectoryEntry(new CFBStream(0,this), this);
+            //this.SSAT = new CFBSSAT(data, this);
         }
     }
 }

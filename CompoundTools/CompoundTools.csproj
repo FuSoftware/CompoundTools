@@ -66,11 +66,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CFB\CFBDirectoryEntry.cs" />
     <Compile Include="CFB\CFBFile.cs" />
     <Compile Include="CFB\CFBHeader.cs" />
+    <Compile Include="CFB\CFBHierarchyBuilder.cs" />
     <Compile Include="CFB\CFBMSAT.cs" />
-    <Compile Include="CFB\CFBSectorAllocationTable.cs" />
+    <Compile Include="CFB\CFBSAT.cs" />
     <Compile Include="CFB\CFBSSAT.cs" />
+    <Compile Include="CFB\CFBStream.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
