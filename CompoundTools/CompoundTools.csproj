@@ -69,7 +69,7 @@
     <Compile Include="CFB\CFBDirectoryEntry.cs" />
     <Compile Include="CFB\CFBFile.cs" />
     <Compile Include="CFB\CFBHeader.cs" />
-    <Compile Include="CFB\CFBHierarchyBuilder.cs" />
+    <Compile Include="CFB\CFBElement.cs" />
     <Compile Include="CFB\CFBMSAT.cs" />
     <Compile Include="CFB\CFBSAT.cs" />
     <Compile Include="CFB\CFBSSAT.cs" />

@@ -21,36 +21,12 @@ namespace CompoundTools.CFB
 
         public static List<int> Parse(byte[] data, CFBHeader header)
         {
-            uint SecSize = header.SectorSize;
-            int nextSector = header.FirstShortSector;
-            List<int> sectors = new List<int>();
-
-            do
-            {
-                int pos = GetSecPos(nextSector, header);
-                byte[] bytes = new byte[SecSize];
-
-                for (int i = pos; i < pos + SecSize; i++)
-                {
-                    bytes[i - pos] = data[i];
-                }
-
-                for (int i = 0; i < bytes.Length; i += 4)
-                {
-                    sectors.Add(BitConverter.ToInt32(bytes, i));
-                }
-
-                //nextSector = currentSector.NextSector;
-            } while (nextSector > 0);
-
-            Console.WriteLine("Found {0} ShortSectors, excpeted {1}", sectors.Count, header.ShortSectorCount);
-
-            return sectors;
+            return null;
         }
 
-        public static int GetSecPos(int SecID, CFBHeader header)
+        public static int GetSecPos(int SecID, uint SectorSize)
         {
-            return (int)(512 + (SecID * header.SectorSize));
+            return (int)(512 + (SecID * SectorSize));
         }
     }
 }
