@@ -21,11 +21,15 @@ namespace CompoundTools
 
     class Program
     {
+        [STAThread]
         public static void Main()
         {
             string file = @"D:\Synos\C_B102.grf";
             byte[] data = File.ReadAllBytes(file);
             CFBFile cFile = new CFBFile(data);
+
+            CFBTreeWindow tw = new CFBTreeWindow(cFile);
+            tw.ShowDialog();
 
             Console.ReadLine();
         }

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompoundTools.CFB
 {
-
-    class CFBFile
+    public class CFBFile
     {
         enum SpecialSector
         {

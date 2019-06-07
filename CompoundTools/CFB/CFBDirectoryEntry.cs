@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompoundTools.CFB
 {
-    class CFBDirectoryEntry
+    public class CFBDirectoryEntry
     {
         public string Name { get; set; }
         public ushort NameBufferSize { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompoundTools.CFB
 {
-    class CFBSSAT
+    public class CFBSSAT
     {
         List<int> SecIDs;
         public List<int> Sectors { get; set; }

@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace CompoundTools.CFB
 {
-    class CFBElement
+    public class CFBElement
     {
         public CFBDirectoryEntry Entry { get; set; }
         public List<CFBElement> Children = new List<CFBElement>();

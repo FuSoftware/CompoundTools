@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompoundTools.CFB
 {
-    class CFBStream
+    public class CFBStream
     {
         public List<byte> Data { get; set; }
 

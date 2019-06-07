@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompoundTools.CFB
 {
-    class CFBMasterSector
+    public class CFBMasterSector
     {
         public List<int> Sectors { get; set; }
         public int NextSector { get; set; }
@@ -29,7 +29,7 @@ namespace CompoundTools.CFB
         }
     }
 
-    class CFBMSAT
+    public class CFBMSAT
     {
         List<CFBMasterSector> MasterSectors;
         List<int> HeaderSectors;
